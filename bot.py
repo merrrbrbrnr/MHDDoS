@@ -6,8 +6,8 @@ from threading import Lock
 import time
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-BOT_TOKEN = "TOKEN AQUI"
-ADMIN_ID = 7178876305
+BOT_TOKEN = "7852580657:AAEXo_cAGjiCO3NW6SSGHMrod0K3nfpE7WQ"
+ADMIN_ID = 7174484995
 START_PY_PATH = "/workspaces/MHDDoS/start.py"
 
 bot = telebot.TeleBot(BOT_TOKEN)
@@ -129,8 +129,6 @@ def handle_ping(message):
         )
         result = cursor.fetchone()
 
-    if not result:
-        bot.reply_to(message, "❌ No tienes permiso para usar este comando.")
         return
 
     expiration_date = datetime.strptime(result[0], "%Y-%m-%d %H:%M:%S")
